@@ -4,11 +4,13 @@ import { Link } from 'expo-router';
 export default function AboutScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Sobre</Text>
+      <Text style={styles.title}>Sobre</Text>
 
-      <Link href="/" style={styles.button}>
-        Ir para início
-      </Link>
+      <Text style={styles.text}>
+        Esse é um aplicativo para calcular qual combustível tem o melhor 
+        custo-benefício entre Gasolina e Etanol no seu posto preferido.
+      </Text>
+
     </View>
   );
 }
@@ -20,8 +22,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  title: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
   text: {
     color: '#fff',
+    fontSize: 18,
+    width: '80%',
+    textAlign: 'justify',
   },
   button: {
     fontSize: 20,
